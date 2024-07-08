@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.socialmedia.user";
+option java_outer_classname = "UserProto";
+
+package user;
+
+service UserService {
+  rpc GetUserDetails (UserRequest) returns (UserResponse);
+  rpc AddUser (AddUserRequest) returns (AddUserResponse);
+}
+
+message UserRequest {
+  string userId = 1;
+}
+
+message UserResponse {
+  string userId = 1;
+  string username = 2;
+  string email = 3;
+  string fullName = 4;
+  string profilePictureUrl = 5;
+}
+
+message AddUserRequest {
+  string username = 1;
+  string email = 2;
+  string fullName = 3;
+  string profilePictureUrl = 4;
+}
+
+message AddUserResponse {
+  string userId = 1;
+}

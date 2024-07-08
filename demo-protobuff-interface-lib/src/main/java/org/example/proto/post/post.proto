@@ -1,10 +1,10 @@
 syntax = "proto3";
 
+package org.example.proto.post;
+
 option java_multiple_files = true;
 option java_package = "org.example.socialmedia.post";
 option java_outer_classname = "PostProto";
-
-package post;
 
 service PostService {
   rpc GetPostDetails (PostRequest) returns (PostResponse);

@@ -1,0 +1,29 @@
+
+g	java:S117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆÓ¡€
+u
+java:S1488ê"_Immediately return this expression instead of assigning it to the temporary variable "builder".(«‰Ÿ~
+l	java:S116,"RRename this field "userId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤îúŒüÿÿÿÿ
+
+java:S4144˜"cUpdate this method so that its implementation is not identical to "getDefaultInstance" on line 500.(÷ª† ÿÿÿÿÿ
+r
+java:S3077,"WUse a thread-safe type; adding "volatile" is not enough to make this field thread-safe.(¤îúŒüÿÿÿÿ
+a
+java:S62014"FReplace this instanceof check and cast with 'instanceof String string'(õõáÀÿÿÿÿÿ
+a
+java:S6201F"FReplace this instanceof check and cast with 'instanceof String string'(õõáÀÿÿÿÿÿ
+V
+java:S1126"AReplace this if-then-else statement by a single return statement.(ûÿ½%
+k	java:S116•"URename this field "bitField0_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö»³Ä
+m	java:S116—"RRename this field "userId_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´ÄÞÍÿÿÿÿÿ
+o
+java:S2975·"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(Îõ¾Òûÿÿÿÿ
+t
+java:S6201Ø"XReplace this instanceof check and cast with 'instanceof AddUserResponse adduserresponse'(öµ†´úÿÿÿÿ
+W	java:S125Œ"<This block of commented-out lines of code should be removed.(“Ž“ùûÿÿÿÿ
+R	java:S125"<This block of commented-out lines of code should be removed.(¯Ë¶‡
+b
+java:S6201ž"FReplace this instanceof check and cast with 'instanceof String string'(Á¿Ö¨üÿÿÿÿ
+]
+java:S6201¯"FReplace this instanceof check and cast with 'instanceof String string'(‡ñž÷
+T
+java:S1854ÿ"=Remove this useless assignment to local variable "!unknown!".(íÝƒ

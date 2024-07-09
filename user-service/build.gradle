@@ -21,6 +21,10 @@ configurations {
 
 repositories {
 	mavenCentral()
+	// Add local Maven repository
+	maven {
+		url = uri("${project.rootDir}/../local-maven-repo")
+	}
 }
 
 dependencies {
@@ -32,6 +36,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	// Dependency for the generated gRPC code from the common project
+	implementation 'com.example:socialmedia-commons:1.0.0'
 }
 
 tasks.named('test') {

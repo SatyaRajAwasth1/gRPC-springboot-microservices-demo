@@ -9,6 +9,7 @@ buildscript {
 plugins {
     id 'java-library'
     id 'com.google.protobuf' version "${protobufPluginVersion}"
+    id 'maven-publish'
 }
 
 repositories {
@@ -55,7 +56,24 @@ sourceSets {
     }
 }
 
-
 clean {
     delete 'build/generated'
+}
+
+// For publishing to local repository
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId = 'com.example'
+            artifactId = 'socialmedia-commons'
+            version = '1.0.0'
+        }
+    }
+    repositories {
+        maven {
+            name = 'localMavenRepo'
+            url = uri("${project.rootDir}/../local-maven-repo")
+        }
+    }
 }

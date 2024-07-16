@@ -37,6 +37,7 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+	implementation 'net.devh:grpc-client-spring-boot-starter:3.1.0.RELEASE'
 	// Dependency for the generated gRPC code from the common project
 	implementation 'com.example:socialmedia-commons:1.0.0'
 }

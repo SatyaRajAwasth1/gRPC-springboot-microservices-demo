@@ -6,6 +6,7 @@ import com.example.socialmedia.user.AddUserRequest;
 import com.example.socialmedia.user.AddUserResponse;
 import com.example.socialmedia.user.UserServiceGrpc;
 
+import io.grpc.stub.StreamObserver;
 import org.springframework.stereotype.Service;
 
 @Service

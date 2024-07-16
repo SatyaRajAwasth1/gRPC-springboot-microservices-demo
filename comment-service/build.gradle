@@ -36,7 +36,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    implementation 'net.devh:grpc-server-spring-boot-starter'
+    implementation 'net.devh:grpc-server-spring-boot-starter:3.1.0.RELEASE'
     implementation 'com.example:socialmedia-commons:1.0.0'  // Add dependency for socialmedia-commons (protobuf shared interface lib from local maven repo)
 }
 

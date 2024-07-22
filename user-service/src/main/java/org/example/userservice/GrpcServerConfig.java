@@ -1,3 +1,4 @@
+/*
 package org.example.userservice;
 
 import io.grpc.Server;
@@ -17,3 +18,4 @@ public class GrpcServerConfig {
                 .build();
     }
 }
+*/

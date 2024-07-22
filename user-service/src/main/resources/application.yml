@@ -1,0 +1,13 @@
+spring:
+  application.name: user-service
+server:
+  port: 1080
+
+grpc:
+  client:
+    postService:
+      address: 'static://localhost:2080'
+      enableKeepAlive: true
+    commentService:
+      address: 'static://localhost:3080'
+      enableKeepAlive: true

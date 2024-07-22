@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: comment-service
+
+grpc:
+  server:
+    port: 3080

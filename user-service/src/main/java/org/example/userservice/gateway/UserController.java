@@ -1,3 +1,4 @@
+/*
 package org.example.userservice.gateway;
 
 import com.example.socialmedia.comment.CommentRequest;
@@ -6,20 +7,22 @@ import com.example.socialmedia.comment.CommentServiceGrpc;
 import com.example.socialmedia.post.PostRequest;
 import com.example.socialmedia.post.PostResponse;
 import com.example.socialmedia.post.PostServiceGrpc;
-import com.example.socialmedia.user.AddUserRequest;
-import com.example.socialmedia.user.AddUserResponse;
-import com.example.socialmedia.user.UserRequest;
-import com.example.socialmedia.user.UserResponse;
-import com.example.socialmedia.user.UserServiceGrpc;
+import com.example.socialmedia.user.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.grpc.StatusRuntimeException;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
+
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     @GrpcClient("postService")
     private PostServiceGrpc.PostServiceBlockingStub postServiceBlockingStub;
@@ -31,13 +34,17 @@ public class UserController {
     private UserServiceGrpc.UserServiceBlockingStub userServiceBlockingStub;
 
     @GetMapping("/posts/{postId}")
-    public ResponseEntity<PostResponse> getPostDetails(@PathVariable String postId) {
+    public ResponseEntity<Map<String, Object>> getPostDetails(@PathVariable String postId) {
         PostRequest request = PostRequest.newBuilder()
                 .setPostId(postId)
                 .build();
         try {
             PostResponse response = postServiceBlockingStub.getPostDetails(request);
-            return ResponseEntity.ok(response);
+            Map<String, Object> respMap = new HashMap<>();
+            respMap.put("postId", response.getPostId());
+            respMap.put("userId", response.getUserId());
+            respMap.put("content", response.getContent());
+            return ResponseEntity.ok(respMap);
         } catch (StatusRuntimeException e) {
             return handleGrpcException(e);
         }
@@ -88,3 +95,4 @@ public class UserController {
         return ResponseEntity.status(status).body(e.getStatus().getDescription());
     }
 }
+*/

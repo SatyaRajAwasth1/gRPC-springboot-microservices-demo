@@ -8,6 +8,9 @@ grpc:
     postService:
       address: 'static://localhost:2080'
       enableKeepAlive: true
+      negotiationType: plainText
+
     commentService:
       address: 'static://localhost:3080'
       enableKeepAlive: true
+      negotiationType: plainText
